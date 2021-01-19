@@ -42,7 +42,7 @@ public class TestController {
     public void downLoadFile(HttpServletResponse response) throws Exception {
         String fileName = "模板.xls";
         Workbook workbook = WorkbookFactory.create(Thread.currentThread().getContextClassLoader().getResourceAsStream( "templates/".concat(fileName)));
-        ExcelUtils.downLoadExcel("模板.xlsx", response, workbook);
+        ExcelUtils.downLoadExcel("模板.xls", response, workbook);
     }
 
     @GetMapping("downLoadData")
